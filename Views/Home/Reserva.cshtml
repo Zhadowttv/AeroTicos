@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroTicos - Vuelos Disponibles</title>
+    <link href="~/css/principal.css" rel="stylesheet" />
+    <link href="~/css/reserva.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">AeroTicos</a>
+        <nav>
+            <a href="@Url.Action("Login", "Home")" class="uatp-btn">Iniciar Seccion</a>
+            <a href="@Url.Action("Index", "Home")">Reservar</a>
+            <a href="@Url.Action("Reserva", "Home")">Ofertas y destinos</a>
+            <a href="@Url.Action("CheckIN", "Home")" class="check-in-btn">Check-in</a>
+            <a href="@Url.Action("INFO", "Home")">Información y ayuda</a>
+        </nav>
+        <a href="@Url.Action("Perfil", "Home")" class="uatp-btn">Perfil</a>
+    </header>
+
+    <main>
+        <h1>Vuelos desde San José de Costa Rica</h1>
+
+        <div class="date-selector" id="dateSelector"></div>
+
+        <div class="flight-list" id="flightList"></div>
+    </main>
+
+    <script>
+        const flights = [
+            { from: 'San José', to: 'Canadá', departure: '08:30', arrival: '18:45', duration: '9h 15m', price: 489.50, stops: 1 },
+            { from: 'San José', to: 'Colombia', departure: '06:15', arrival: '12:30', duration: '5h 15m', price: 299.99, stops: 0 },
+            { from: 'San José', to: 'Nueva York', departure: '07:00', arrival: '15:30', duration: '7h 30m', price: 425.75, stops: 1 },
+            { from: 'San José', to: 'San Francisco', departure: '09:45', arrival: '21:00', duration: '10h 15m', price: 512.30, stops: 1 },
+            { from: 'San José', to: 'Vancouver', departure: '10:30', arrival: '22:00', duration: '10h 30m', price: 499.99, stops: 1 },
+            { from: 'San José', to: 'Japón', departure: '14:20', arrival: '21:35', duration: '16h 15m', price: 872.80, stops: 2 }
+        ];
+
+        function generateDates() {
+            const dates = [];
+            const startDate = new Date('2024-10-06');
+            const endDate = new Date('2024-12-31');
+
+            while (startDate <= endDate) {
+                dates.push(new Date(startDate));
+                startDate.setDate(startDate.getDate() + 1);
+            }
+
+            return dates;
+        }
+
+        function formatDate(date) {
+            const options = { weekday: 'short', day: 'numeric', month: 'short' };
+            return date.toLocaleDateString('es-ES', options);
+        }
+
+        function renderDateSelector() {
+            const dateSelector = document.getElementById('dateSelector');
+            const dates = generateDates();
+
+            dates.forEach((date, index) => {
+                const button = document.createElement('button');
+                button.className = 'date-button';
+                button.textContent = formatDate(date);
+                button.onclick = () => selectDate(index);
+                dateSelector.appendChild(button);
+            });
+        }
+
+        function selectDate(index) {
+            const buttons = document.querySelectorAll('.date-button');
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('selected', i === index);
+            });
+            renderFlights(index);
+        }
+
+        function renderFlights(dateIndex) {
+            const flightList = document.getElementById('flightList');
+            flightList.innerHTML = '';
+
+            const shuffledFlights = [...flights].sort(() => Math.random() - 0.5);
+
+            shuffledFlights.forEach(flight => {
+                const flightItem = document.createElement('div');
+                flightItem.className = 'flight-item';
+
+                const departureTime = addMinutes(flight.departure, dateIndex * 3);
+                const arrivalTime = addMinutes(flight.arrival, dateIndex * 3);
+
+                flightItem.innerHTML = `
+                            <div class="flight-details">
+                                <div>
+                                    <strong>${departureTime}</strong>
+                                    <div>${flight.from}</div>
+                                </div>
+                                <div>
+                                    <div>${flight.duration}</div>
+                                    <div>${flight.stops === 0 ? 'Directo' : `${flight.stops} Parada${flight.stops > 1 ? 's' : ''}`}</div>
+                                </div>
+                                <div>
+                                    <strong>${arrivalTime}</strong>
+                                    <div>${flight.to}</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div><strong>USD ${flight.price.toFixed(2)}</strong></div>
+                                <button class="select-button">Seleccionar</button>
+                            </div>
+                        `;
+
+                flightList.appendChild(flightItem);
+            });
+        }
+
+        function addMinutes(time, minutes) {
+            const [hours, mins] = time.split(':').map(Number);
+            const date = new Date(2024, 0, 1, hours, mins);
+            date.setMinutes(date.getMinutes() + minutes);
+            return date.toTimeString().slice(0, 5);
+        }
+
+        renderDateSelector();
+        selectDate(0);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroTicos", "AeroTicos.csproj", "{9AE8CDA0-B45C-44E9-B71E-6B028EED8962}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{8B817CBD-0635-4447-9F2D-12E2151EFC9E}"
+	ProjectSection(SolutionItems) = preProject
+		Obfuscar.xml = Obfuscar.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AE8CDA0-B45C-44E9-B71E-6B028EED8962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE8CDA0-B45C-44E9-B71E-6B028EED8962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE8CDA0-B45C-44E9-B71E-6B028EED8962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE8CDA0-B45C-44E9-B71E-6B028EED8962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D813B801-F86F-426C-9052-73D8A4445F60}
+	EndGlobalSection
+EndGlobal

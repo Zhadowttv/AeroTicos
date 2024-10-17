@@ -1,0 +1,68 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AeroTicos/1.0.0": {
+        "dependencies": {
+          "Obfuscar": "2.2.39",
+          "OpenSSL.X509Certificate2.Provider": "1.3.0"
+        },
+        "runtime": {
+          "AeroTicos.dll": {}
+        }
+      },
+      "Obfuscar/2.2.39": {},
+      "OpenSSL.PrivateKeyDecoder/1.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/OpenSSL.PrivateKeyDecoder.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "OpenSSL.X509Certificate2.Provider/1.3.0": {
+        "dependencies": {
+          "OpenSSL.PrivateKeyDecoder": "1.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenSSL.X509Certificate2.Provider.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AeroTicos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Obfuscar/2.2.39": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q122NXirGn4dEw4xSUj6iRAwdCDBhFa5b+byygGzLnrFSsAV1iZ3G/BXW6GkK5TsYdtkD+IgFKA/LnHFbZ/LSw==",
+      "path": "obfuscar/2.2.39",
+      "hashPath": "obfuscar.2.2.39.nupkg.sha512"
+    },
+    "OpenSSL.PrivateKeyDecoder/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jTSXZBIjm2uWUAKLqUqdzzFByWVgkxqbMj0LgYCXTerKuRWRKWAOOAOhWP5samqu7deUJAvB5EYLa9noCZUWpQ==",
+      "path": "openssl.privatekeydecoder/1.3.0",
+      "hashPath": "openssl.privatekeydecoder.1.3.0.nupkg.sha512"
+    },
+    "OpenSSL.X509Certificate2.Provider/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G9hAaEJ94GJFr16/vkeusq6Nfm5rtPYQ34uNwpUdUKQeNL9zT8B0F1+Z9C55IXl62U9N+e4wDpYTDGz8HrcprA==",
+      "path": "openssl.x509certificate2.provider/1.3.0",
+      "hashPath": "openssl.x509certificate2.provider.1.3.0.nupkg.sha512"
+    }
+  }
+}

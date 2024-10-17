@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroTicos - Gestiona tu reserva</title>
+    <link href="~/css/checkin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="logo">AeroTicos</a>
+        <div class="blue-bar"></div>
+        <h1>Gestiona tu reserva</h1>
+        <p class="description">
+            ¡Hola a los que diseñan su propia forma de volar! Añade equipaje, elige tu asiento, modifica tu vuelo y mucho más. Ingresa tu código de reserva y apellido.
+        </p>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="reservationCode">Código de reserva</label>
+                <input type="text" id="reservationCode" name="reservationCode" required>
+                <p class="helper-text">Debe ser alfanumérico (ejemplo: AAA000)</p>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido(s)</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <p class="helper-text">Ingresa tu(s) apellido(s), tal como aparecen en tu reserva</p>
+            </div>
+            <div class="button-group">
+                <a href="@Url.Action("Index", "Home")" class="button button-secondary">Volver al inicio</a>
+                <button type="submit" class="button button-primary">Gestionar reserva</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const reservationCode = document.getElementById('reservationCode').value;
+            const lastName = document.getElementById('lastName').value;
+            console.log('Código de reserva:', reservationCode);
+            console.log('Apellido:', lastName);
+            // Here you would typically send this data to a server
+        });
+    </script>
+</body>
+</html>

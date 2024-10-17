@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroTicos - Perfil de Usuario</title>
+   
+
+    <link href="~/css/perfil.css" rel="stylesheet" />
+    <link href="~/css/principal.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">AeroTicos</a>
+        <nav>
+            <a href="@Url.Action("Login", "Home")" class="uatp-btn">Iniciar Seccion</a>
+            <a href="@Url.Action("Index", "Home")">Reservar</a>
+            <a href="@Url.Action("Reserva", "Home")">Ofertas y destinos</a>
+            <a href="@Url.Action("CheckIN", "Home")" class="check-in-btn">Check-in</a>
+            <a href="@Url.Action("INFO", "Home")">Información y ayuda</a>
+        </nav>
+        <a href="@Url.Action("Perfil", "Home")" class="uatp-btn">Perfil</a>
+    </header>
+    <div class="profile-window">
+        <h1>Perfil de Usuario</h1>
+
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'profile')">Perfil</button>
+            <button class="tab" onclick="openTab(event, 'flights')">Historial de Vuelos</button>
+            <button class="tab" onclick="openTab(event, 'purchases')">Compras Actuales</button>
+        </div>
+
+        <div id="profile" class="tab-content active">
+            <h2>Información Personal</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" value="Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" value="juan.perez@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" value="+506 8888 8888" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" value="San José, Costa Rica" required>
+                </div>
+                <button type="submit" class="btn">Guardar Cambios</button>
+            </form>
+        </div>
+
+        <div id="flights" class="tab-content">
+            <h2>Historial de Vuelos</h2>
+            <div class="flight-item">
+                <h3>San José a New York</h3>
+                <p>Fecha: 15 de diciembre, 2023</p>
+                <span class="status completed">Completado</span>
+            </div>
+            <div class="flight-item">
+                <h3>New York a San José</h3>
+                <p>Fecha: 22 de diciembre, 2023</p>
+                <span class="status completed">Completado</span>
+            </div>
+            <div class="flight-item">
+                <h3>San José a Miami</h3>
+                <p>Fecha: 1 de marzo, 2024</p>
+                <span class="status upcoming">Próximo</span>
+            </div>
+        </div>
+
+        <div id="purchases" class="tab-content">
+            <h2>Compras Actuales</h2>
+            <div class="purchase-item">
+                <h3>Equipaje Extra</h3>
+                <p>Vuelo: SJO a MIA</p>
+                <p>Precio: $50</p>
+            </div>
+            <div class="purchase-item">
+                <h3>Actualización de Vuelo</h3>
+                <p>Vuelo: SJO a MIA</p>
+                <p>Actualizacion de Fecha de Salida y Fecha de Abordaje</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

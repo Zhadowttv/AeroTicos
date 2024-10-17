@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "M+HExKiNNGY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\AeroTicos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhado\\.nuget\\packages\\obfuscar\\2.2.39\\obfuscar.2.2.39.nupkg.sha512",
+    "C:\\Users\\zhado\\.nuget\\packages\\openssl.privatekeydecoder\\1.3.0\\openssl.privatekeydecoder.1.3.0.nupkg.sha512",
+    "C:\\Users\\zhado\\.nuget\\packages\\openssl.x509certificate2.provider\\1.3.0\\openssl.x509certificate2.provider.1.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
