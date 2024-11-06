@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroTicos - Panel de Administración</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="~/css/principal.css" rel="stylesheet" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+ 
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            </div>
+        </nav>
+
+        <main>
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div class="px-4 py-6 sm:px-0">
+                    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex flex-wrap -mb-px">
+                                <button class="tab-button mr-2 inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="clients">
+                                    <i class="fas fa-users mr-2"></i>Clientes
+                                </button>
+                                <button class="tab-button mr-2 inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="employees">
+                                    <i class="fas fa-user-tie mr-2"></i>Empleados
+                                </button>
+                                <button class="tab-button mr-2 inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="reservations">
+                                    <i class="fas fa-calendar-alt mr-2"></i>Reservas
+                                </button>
+                                <button class="tab-button mr-2 inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="flights">
+                                    <i class="fas fa-plane mr-2"></i>Vuelos
+                                </button>
+                            </div>
+
+                            <div id="clients" class="tab-content active mt-6">
+                                <div class="sm:flex sm:items-center">
+                                    <div class="sm:flex-auto">
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900">Lista de Clientes</h3>
+                                    </div>
+                                    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                                        <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">
+                                            Agregar cliente
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex flex-col">
+                                    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                                                <table class="min-w-full divide-y divide-gray-300">
+                                                    <thead class="bg-gray-50">
+                                                        <tr>
+                                                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Nombre</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Teléfono</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Dirección</th>
+                                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                                                <span class="sr-only">Editar</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200 bg-white">
+                                                        <tr>
+                                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Juan Pérez</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">juan.perez@example.com</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">+506 8888 8888</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">San José, Costa Rica</td>
+                                                            <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                                <a href="#" class="text-blue-600 hover:text-blue-900">Editar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="employees" class="tab-content mt-6">
+                                <div class="sm:flex sm:items-center">
+                                    <div class="sm:flex-auto">
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900">Lista de Empleados</h3>
+                                    </div>
+                                    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                                        <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">
+                                            Agregar empleado
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex flex-col">
+                                    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                                                <table class="min-w-full divide-y divide-gray-300">
+                                                    <thead class="bg-gray-50">
+                                                        <tr>
+                                                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Nombre</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Cargo</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Teléfono</th>
+                                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                                                <span class="sr-only">Editar</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200 bg-white">
+                                                        <tr>
+                                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">María González</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Agente de Ventas</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">maria.gonzalez@aeroticos.com</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">+506 7777 7777</td>
+                                                            <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                                <a href="#" class="text-blue-600 hover:text-blue-900">Editar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="reservations" class="tab-content mt-6">
+                                <div class="sm:flex sm:items-center">
+                                    <div class="sm:flex-auto">
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900">Lista de Reservas</h3>
+                                    </div>
+                                    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                                        <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">
+                                            Nueva reserva
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex flex-col">
+                                    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                                                <table class="min-w-full divide-y divide-gray-300">
+                                                    <thead class="bg-gray-50">
+                                                        <tr>
+                                                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">ID Reserva</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Cliente</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Vuelo</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Fecha</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Estado</th>
+                                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                                                <span class="sr-only">Editar</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200 bg-white">
+                                                        <tr>
+                                                            <td class="whitespace-nowrap py-4 pl-4  pr-3 text-sm font-medium text-gray-900 sm:pl-6">#12345</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Juan Pérez</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">SJO - MIA</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 de marzo, 2024</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Confirmada</span>
+                                                            </td>
+                                                            <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                                <a href="#" class="text-blue-600 hover:text-blue-900">Gestionar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="flights" class="tab-content mt-6">
+                                <div class="sm:flex sm:items-center">
+                                    <div class="sm:flex-auto">
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900">Lista de Vuelos</h3>
+                                    </div>
+                                    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                                        <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">
+                                            Agregar vuelo
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 flex flex-col">
+                                    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                                                <table class="min-w-full divide-y divide-gray-300">
+                                                    <thead class="bg-gray-50">
+                                                        <tr>
+                                                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Número de Vuelo</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Origen</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Destino</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Fecha</th>
+                                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Estado</th>
+                                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                                                <span class="sr-only">Editar</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200 bg-white">
+                                                        <tr>
+                                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">AT101</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">San José (SJO)</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Miami (MIA)</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 de marzo, 2024</td>
+                                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Programado</span>
+                                                            </td>
+                                                            <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                                <a href="#" class="text-blue-600 hover:text-blue-900">Modificar</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('text-blue-600', 'border-blue-600'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('text-blue-600', 'border-blue-600');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

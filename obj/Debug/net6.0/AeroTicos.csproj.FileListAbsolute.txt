@@ -6,6 +6,9 @@ C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\AeroTico
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\AeroTicos.runtimeconfig.json
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\AeroTicos.dll
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\AeroTicos.pdb
+C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\OpenSSL.PrivateKeyDecoder.dll
+C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\OpenSSL.X509Certificate2.Provider.dll
+C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.csproj.AssemblyReference.cache
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.AssemblyInfoInputs.cache
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.AssemblyInfo.cs
@@ -13,6 +16,7 @@ C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTico
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.RazorAssemblyInfo.cache
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.RazorAssemblyInfo.cs
+C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.sourcelink.json
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\staticwebassets\msbuild.AeroTicos.Microsoft.AspNetCore.StaticWebAssets.props
@@ -23,12 +27,9 @@ C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\staticwe
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\scopedcss\bundle\AeroTicos.styles.css
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\scopedcss\projectbundle\AeroTicos.bundle.scp.css
+C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.csproj.Up2Date
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.dll
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\refint\AeroTicos.dll
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.pdb
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.genruntimeconfig.cache
 C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\ref\AeroTicos.dll
-C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\OpenSSL.PrivateKeyDecoder.dll
-C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\bin\Debug\net6.0\OpenSSL.X509Certificate2.Provider.dll
-C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.csproj.AssemblyReference.cache
-C:\Users\zhado\OneDrive\Escritorio\AeroTicos\AeroTicos\obj\Debug\net6.0\AeroTicos.csproj.Up2Date

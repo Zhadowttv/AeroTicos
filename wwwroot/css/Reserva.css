@@ -1,91 +1,114 @@
-﻿:root {
-    --primary-color: #0077be;
-    --secondary-color: #e30613;
-    --text-color: #333;
-    --background-color: #f4f4f4;
-}
-
-body, html {
+﻿body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f0f0f0;
 }
 
-header {
-    background-color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-main {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.logo {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+    .nav-button.active {
+        background-color: #0000ff;
+        color: #fff;
+    }
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .date-selector {
     display: flex;
     overflow-x: auto;
     gap: 10px;
-    padding: 10px 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .date-button {
-    background-color: white;
-    border: 1px solid var(--primary-color);
-    padding: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
     cursor: pointer;
-    min-width: 100px;
-    text-align: center;
 }
 
-    .date-button.selected {
-        background-color: var(--primary-color);
-        color: white;
+    .date-button.active {
+        background-color: #0000ff;
+        color: #fff;
     }
 
 .flight-list {
-    margin-top: 20px;
+    display: grid;
+    gap: 20px;
 }
 
-.flight-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
+.flight-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flight-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.flight-details {
-    display: flex;
-    gap: 20px;
+.flight-time {
+    text-align: center;
 }
 
-.select-button {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.flight-time-large {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.flight-time-small {
+    font-size: 14px;
+    color: #666;
+}
+
+.flight-duration {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
 }

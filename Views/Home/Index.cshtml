@@ -9,54 +9,11 @@
 
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">AeroTicos</a>
-        <nav>
-            <a href="@Url.Action("Login", "Home")" class="uatp-btn">Iniciar Seccion</a>
-            <a href="@Url.Action("Index", "Home")">Reservar</a>
-            <a href="@Url.Action("Reserva", "Home")">Ofertas y destinos</a>
-            <a href="@Url.Action("CheckIN", "Home")" class="check-in-btn">Check-in</a>
-            <a href="@Url.Action("INFO", "Home")">Información y ayuda</a>
-        </nav>
-        <a href="@Url.Action("Perfil", "Home")" class="uatp-btn">Perfil</a>
-    </header>
-
     <main>
         <form class="search-form">
             <div class="form-group">
-                <label>
-                    <input type="radio" name="trip-type" value="round-trip" checked> Ida y vuelta
-                </label>
-                <label>
-                    <input type="radio" name="trip-type" value="one-way"> Solo ida
-                </label>
             </div>
-            <div class="form-group">
-                <label for="origin">Origen</label>
-                <input type="text" id="origin" value="San José de Costa Rica (SJO)" required>
-            </div>
-            <div class="form-group">
-                <label for="destination">Destino</label>
-                <input type="text" id="destination" placeholder="Seleccionar destino" required>
-            </div>
-            <div class="form-group">
-                <label for="departure">Ida</label>
-                <input type="date" id="departure" value="2024-10-26" required>
-            </div>
-            <div class="form-group">
-                <label for="return">Vuelta</label>
-                <input type="date" id="return" value="2024-11-14" required>
-            </div>
-            <div class="form-group">
-                <label for="passengers">Pasajeros</label>
-                <select id="passengers">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div>
-            <button type="submit" class="search-btn">Buscar vuelos</button>
+            <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Gestionar Reserva</button>
         </form>
 
         <div class="promo-banner" style="background-image: url('https://lh5.googleusercontent.com/p/AF1QipM6JAFykykjq5eKGdf-aL0onDauMjeZGLi5hHhX=w540-h312-n-k-no');">
@@ -65,8 +22,7 @@
                 <h2 class="promo-title">¡Otoño en Canadá!</h2>
                 <p>Disfruta de los colores del otoño en octubre</p>
                 <p>Vuelos a Toronto y Montreal desde</p>
-                <p class="promo-price">USD 299</p>
-                <a href="#" class="promo-btn">Reserva ahora</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">¡Otoño en Canadá!</button>
             </div>
         </div>
 
@@ -76,8 +32,7 @@
                 <h2 class="promo-title">Noviembre en Colombia</h2>
                 <p>Escápate al calor de Cartagena</p>
                 <p>Vuelos directos desde San José a Cartagena</p>
-                <p class="promo-price">USD 199</p>
-                <a href="#" class="promo-btn">Descubre Colombia</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Descubre Colombia</button>
             </div>
         </div>
 
@@ -87,8 +42,7 @@
                 <h2 class="promo-title">Navidad en Nueva York</h2>
                 <p>Vive la magia de diciembre en la Gran Manzana</p>
                 <p>Vuelos a Nueva York desde</p>
-                <p class="promo-price">USD 349</p>
-                <a href="#" class="promo-btn">Reserva tu viaje navideño</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Descubre Nueva York</button>
             </div>
         </div>
 
@@ -98,8 +52,8 @@
                 <h2 class="promo-title">Otoño en San Francisco</h2>
                 <p>Explora la ciudad de la bahía en octubre</p>
                 <p>Vuelos a San Francisco desde</p>
-                <p class="promo-price">USD 279</p>
-                <a href="#" class="promo-btn">Descubre California</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Descubre California</button>
+               
             </div>
         </div>
 
@@ -109,8 +63,7 @@
                 <h2 class="promo-title">Noviembre en Vancouver</h2>
                 <p>Descubre la belleza natural de Vancouver</p>
                 <p>Vuelos a Vancouver desde</p>
-                <p class="promo-price">USD 319</p>
-                <a href="#" class="promo-btn">Explora Canadá</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Explora Canada</button>
             </div>
         </div>
 
@@ -120,8 +73,7 @@
                 <h2 class="promo-title">Diciembre en Japon</h2>
                 <p>Disfruta de los famosos Paisajes de Japon</p>
                 <p>Vuelos a Japon desde</p>
-                <p class="promo-price">USD 629</p>
-                <a href="#" class="promo-btn">Vive una Aventura Japonesa</a>
+                <button type="button" class="search-btn" onclick="window.location.href='@Url.Action("SistemaReserva", "Home")'">Vive una Aventura Japonesa</button>
             </div>
         </div>
     </main>

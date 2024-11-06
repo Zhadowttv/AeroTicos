@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\INFO.css"
     },
     {
+      "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\Login1.css",
+      "PackagePath": "staticwebassets\\css\\Login1.css"
+    },
+    {
       "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\Perfil.css",
       "PackagePath": "staticwebassets\\css\\Perfil.css"
     },
@@ -25,8 +29,16 @@
       "PackagePath": "staticwebassets\\css\\Reserva.css"
     },
     {
-      "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\login.css",
-      "PackagePath": "staticwebassets\\css\\login.css"
+      "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\SistemaReserva.css",
+      "PackagePath": "staticwebassets\\css\\SistemaReserva.css"
+    },
+    {
+      "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\registrar.css",
+      "PackagePath": "staticwebassets\\css\\registrar.css"
     },
     {
       "Id": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\site.css",

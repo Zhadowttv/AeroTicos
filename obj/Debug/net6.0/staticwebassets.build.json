@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hgJ4+cW2AGecEYyFSHG3d1MSIf9pur6PwQYoxDGK0HA=",
+  "Hash": "M69oQlQWP56u9Y8ZRkSnHbI7NB8O+ig2y1E8/SM2rwQ=",
   "Source": "AeroTicos",
   "BasePath": "_content/AeroTicos",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AeroTicos.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\admin.css",
+      "SourceId": "AeroTicos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\",
+      "BasePath": "_content/AeroTicos",
+      "RelativePath": "css/admin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin.css"
+    },
+    {
       "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\CheckIN.css",
       "SourceId": "AeroTicos",
       "SourceType": "Discovered",
@@ -93,12 +112,12 @@
       "OriginalItemSpec": "wwwroot\\css\\INFO.css"
     },
     {
-      "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\login.css",
+      "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\Login1.css",
       "SourceId": "AeroTicos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\",
       "BasePath": "_content/AeroTicos",
-      "RelativePath": "css/login.css",
+      "RelativePath": "css/Login1.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\login.css"
+      "OriginalItemSpec": "wwwroot\\css\\Login1.css"
     },
     {
       "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\Perfil.css",
@@ -150,6 +169,25 @@
       "OriginalItemSpec": "wwwroot\\css\\Principal.css"
     },
     {
+      "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\registrar.css",
+      "SourceId": "AeroTicos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\",
+      "BasePath": "_content/AeroTicos",
+      "RelativePath": "css/registrar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\registrar.css"
+    },
+    {
       "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\Reserva.css",
       "SourceId": "AeroTicos",
       "SourceType": "Discovered",
@@ -167,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Reserva.css"
+    },
+    {
+      "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\SistemaReserva.css",
+      "SourceId": "AeroTicos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\",
+      "BasePath": "_content/AeroTicos",
+      "RelativePath": "css/SistemaReserva.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SistemaReserva.css"
     },
     {
       "Identity": "C:\\Users\\zhado\\OneDrive\\Escritorio\\AeroTicos\\AeroTicos\\wwwroot\\css\\site.css",

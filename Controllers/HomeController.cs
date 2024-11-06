@@ -18,6 +18,11 @@ namespace AeroTicos.Controllers
             return View();
         }
 
+        public IActionResult SistemaReserva()
+        {
+            return View();
+        }
+
         public IActionResult Reserva()
         {
             return View();
@@ -44,6 +49,16 @@ namespace AeroTicos.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Registrar()
+        {
+            return View();
+        }
+
+        public IActionResult PanelAdmin()
         {
             return View();
         }

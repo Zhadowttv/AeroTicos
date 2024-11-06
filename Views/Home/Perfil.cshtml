@@ -4,23 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroTicos - Perfil de Usuario</title>
-   
-
     <link href="~/css/perfil.css" rel="stylesheet" />
     <link href="~/css/principal.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">AeroTicos</a>
-        <nav>
-            <a href="@Url.Action("Login", "Home")" class="uatp-btn">Iniciar Seccion</a>
-            <a href="@Url.Action("Index", "Home")">Reservar</a>
-            <a href="@Url.Action("Reserva", "Home")">Ofertas y destinos</a>
-            <a href="@Url.Action("CheckIN", "Home")" class="check-in-btn">Check-in</a>
-            <a href="@Url.Action("INFO", "Home")">Información y ayuda</a>
-        </nav>
-        <a href="@Url.Action("Perfil", "Home")" class="uatp-btn">Perfil</a>
-    </header>
+    
     <div class="profile-window">
         <h1>Perfil de Usuario</h1>
 
@@ -101,6 +89,6 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
-    </script>
+    </script> 
 </body>
 </html>

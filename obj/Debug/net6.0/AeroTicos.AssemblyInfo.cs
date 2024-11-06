@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AeroTicos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0557e95a771a78f343f9c54b9c6aa26777cb30eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AeroTicos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AeroTicos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

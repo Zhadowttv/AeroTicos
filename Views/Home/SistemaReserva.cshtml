@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas de Vuelos</title>
+    <link href="~/css/principal.css" rel="stylesheet" />
+    <link href="~/css/sistemareserva.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Reservas de Vuelos</h1>
+        <form id="reservaForm">
+            <h2>Registro de Cliente</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required oninput="actualizarResumen()">
+
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required oninput="actualizarResumen()">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required oninput="actualizarResumen()">
+
+            <label for="pasaporte">Número de Pasaporte:</label>
+            <input type="text" id="pasaporte" name="pasaporte" required oninput="actualizarResumen()">
+
+            <h2>Detalles del Vuelo</h2>
+            <label for="destino">Destino:</label>
+            <select id="destino" name="destino" required onchange="actualizarResumen()">
+                <option value="">Seleccione un destino</option>
+                <option value="Colombia|300">Colombia - $300</option>
+                <option value="Vancouver|500">Vancouver - $500</option>
+                <option value="New York|400">New York - $400</option>
+                <option value="Canada|550">Canada - $550</option>
+            </select>
+
+            <label for="partida">Lugar de Partida:</label>
+            <select id="partida" name="partida" required onchange="actualizarResumen()">
+                <option value="">Seleccione lugar de partida</option>
+                <option value="Juan Santamaría">Aeropuerto Juan Santamaría-Alajuela</option>
+                <option value="Tobías Bolaños">Aeropuerto Internacional Tobías Bolaños</option>
+                <option value="Guanacaste">Guanacaste Airport</option>
+            </select>
+
+            <label for="horario">Horario:</label>
+            <select id="horario" name="horario" required onchange="actualizarResumen()">
+                <option value="">Seleccione un horario</option>
+                <option value="manana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+            </select>
+
+            <label for="extras">Extras:</label>
+            <select id="extras" name="extras" required onchange="actualizarResumen()">
+                <option value="0">Sin maletas adicionales</option>
+                <option value="50">1 maleta adicional - $50</option>
+                <option value="80">2 maletas adicionales - $80</option>
+                <option value="100">3 maletas adicionales - $100</option>
+            </select>
+
+            <label for="tipoViaje">Tipo de Viaje:</label>
+            <select id="tipoViaje" name="tipoViaje" required onchange="actualizarResumen()">
+                <option value="ida">Solo Ida</option>
+                <option value="idaVuelta">Ida y Vuelta</option>
+            </select>
+
+            <label for="fechaSalida">Fecha de Salida:</label>
+            <input type="date" id="fechaSalida" name="fechaSalida" required onchange="actualizarResumen()">
+
+            <label for="fechaRegreso">Fecha de Regreso:</label>
+            <input type="date" id="fechaRegreso" name="fechaRegreso" onchange="actualizarResumen()">
+        </form>
+
+        <h2>Resumen de la Reserva</h2>
+        <table id="resumenTabla">
+            <tr>
+                <th colspan="2">Datos del Cliente</th>
+            </tr>
+            <tr>
+                <td>Nombre:</td>
+                <td id="resumenNombre">-</td>
+            </tr>
+            <tr>
+                <td>Cédula:</td>
+                <td id="resumenCedula">-</td>
+            </tr>
+            <tr>
+                <td>Correo Electrónico:</td>
+                <td id="resumenEmail">-</td>
+            </tr>
+            <tr>
+                <td>Número de Pasaporte:</td>
+                <td id="resumenPasaporte">-</td>
+            </tr>
+            <tr>
+                <th colspan="2">Detalles del Vuelo</th>
+            </tr>
+            <tr>
+                <td>Destino:</td>
+                <td id="resumenDestino">-</td>
+            </tr>
+            <tr>
+                <td>Lugar de Partida:</td>
+                <td id="resumenPartida">-</td>
+            </tr>
+            <tr>
+                <td>Horario:</td>
+                <td id="resumenHorario">-</td>
+            </tr>
+            <tr>
+                <td>Extras:</td>
+                <td id="resumenExtras">-</td>
+            </tr>
+            <tr>
+                <td>Tipo de Viaje:</td>
+                <td id="resumenTipoViaje">-</td>
+            </tr>
+            <tr>
+                <td>Fecha de Salida:</td>
+                <td id="resumenFechaSalida">-</td>
+            </tr>
+            <tr>
+                <td>Fecha de Regreso:</td>
+                <td id="resumenFechaRegreso">-</td>
+            </tr>
+            <tr>
+                <td>Número de Vuelo:</td>
+                <td id="resumenNumeroVuelo">-</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td id="resumenTotal">$0</td>
+            </tr>
+        </table>
+
+        <button onclick="confirmarReserva()">Confirmar Reserva</button>
+
+        <div id="paymentForm" style="display:none;">
+            <h2>Pago con Tarjeta</h2>
+            <form id="cardPaymentForm">
+                <label for="cardNumber">Número de Tarjeta:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+
+                <label for="cardName">Nombre en la Tarjeta:</label>
+                <input type="text" id="cardName" name="cardName" required>
+
+                <label for="expiryDate">Fecha de Expiración:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="button" onclick="procesarPago()">Pagar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function actualizarResumen() {
+            // Actualizar datos del cliente
+            document.getElementById('resumenNombre').textContent = document.getElementById('nombre').value || '-';
+            document.getElementById('resumenCedula').textContent = document.getElementById('cedula').value || '-';
+            document.getElementById('resumenEmail').textContent = document.getElementById('email').value || '-';
+            document.getElementById('resumenPasaporte').textContent = document.getElementById('pasaporte').value || '-';
+
+            // Actualizar detalles del vuelo
+            const destino = document.getElementById('destino');
+            const destinoSeleccionado = destino.options[destino.selectedIndex];
+            document.getElementById('resumenDestino').textContent = destinoSeleccionado ? destinoSeleccionado.text : '-';
+
+            const partida = document.getElementById('partida');
+            document.getElementById('resumenPartida').textContent = partida.value || '-';
+
+            const horario = document.getElementById('horario');
+            const horarioSeleccionado = horario.options[horario.selectedIndex].text;
+            const horaAleatoria = generarHoraAleatoria(horario.value);
+            document.getElementById('resumenHorario').textContent = horarioSeleccionado ? `${horarioSeleccionado} - ${horaAleatoria}` : '-';
+
+            const extras = document.getElementById('extras');
+            document.getElementById('resumenExtras').textContent = extras.options[extras.selectedIndex].text || '-';
+
+            const tipoViaje = document.getElementById('tipoViaje');
+            document.getElementById('resumenTipoViaje').textContent = tipoViaje.value === 'ida' ? 'Solo Ida' : 'Ida y Vuelta';
+
+            const fechaSalida = document.getElementById('fechaSalida');
+            const fechaRegreso = document.getElementById('fechaRegreso');
+            document.getElementById('resumenFechaSalida').textContent = fechaSalida.value || '-';
+            document.getElementById('resumenFechaRegreso').textContent = fechaRegreso.value || '-';
+
+            // Generar número de vuelo
+            const numeroVuelo = generarNumeroVuelo();
+            document.getElementById('resumenNumeroVuelo').textContent = numeroVuelo;
+
+            // Calcular total
+            let total = 0;
+            if (destinoSeleccionado) {
+                total += parseInt(destinoSeleccionado.value.split('|')[1]);
+            }
+            total += parseInt(extras.value);
+            if (tipoViaje.value === 'idaVuelta') {
+                total *= 2;
+            }
+            document.getElementById('resumenTotal').textContent = '$' + total;
+        }
+
+        function generarHoraAleatoria(horario) {
+            let hora, minutos;
+            switch(horario) {
+                case 'manana':
+                    hora = Math.floor(Math.random() * (11 - 6 + 1)) + 6;
+                    break;
+                case 'tarde':
+                    hora = Math.floor(Math.random() * (17 - 12 + 1)) + 12;
+                    break;
+                case 'noche':
+                    hora = Math.floor(Math.random() * (23 - 18 + 1)) + 18;
+                    break;
+                default:
+                    return '';
+            }
+            minutos = Math.floor(Math.random() * 60);
+            return `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`;
+        }
+
+        function generarNumeroVuelo() {
+            const prefijo = 'CR';
+            const numero = Math.floor(1000 + Math.random() * 9000);
+            return `${prefijo}${numero}`;
+        }
+
+        function confirmarReserva() {
+            if (document.getElementById('reservaForm').checkValidity()) {
+                document.getElementById('paymentForm').style.display = 'block';
+            } else {
+                alert('Por favor, complete todos los campos requeridos.');
+            }
+        }
+
+        function enviarTiquetePorEmail() {
+            const tiquete = `
+                Tiquete de Viaje
+
+                Número de Vuelo: ${document.getElementById('resumenNumeroVuelo').textContent}
+                Pasajero: ${document.getElementById('resumenNombre').textContent}
+                Destino: ${document.getElementById('resumenDestino').textContent}
+                Fecha de Salida: ${document.getElementById('resumenFechaSalida').textContent}
+                Horario: ${document.getElementById('resumenHorario').textContent}
+                Lugar de Partida: ${document.getElementById('resumenPartida').textContent}
+                Tipo de Viaje: ${document.getElementById('resumenTipoViaje').textContent}
+
+                ${document.getElementById('resumenTipoViaje').textContent === 'Ida y Vuelta' ?
+                    `Fecha de Regreso: ${document.getElementById('resumenFechaRegreso').textContent}` : ''}
+            `;
+
+            const email = document.getElementById('email').value;
+            console.log(`Enviando tiquete por email a ${email}:`);
+            console.log(tiquete);
+            alert(`Tiquete enviado por correo electrónico a ${email}`);
+        }
+
+        function procesarPago() {
+            if (document.getElementById('cardPaymentForm').checkValidity()) {
+                const total = document.getElementById('resumenTotal').textContent;
+                alert(`Pago procesado con éxito. Total pagado: ${total}`);
+                // Aquí se podría enviar la información a un servidor para procesar el pago
+                console.log('Reserva confirmada y pagada:', {
+                    cliente: {
+                        nombre: document.getElementById('nombre').value,
+                        cedula: document.getElementById('cedula').value,
+                        email: document.getElementById('email').value,
+                        pasaporte: document.getElementById('pasaporte').value
+                    },
+                    vuelo: {
+                        destino: document.getElementById('resumenDestino').textContent,
+                        partida: document.getElementById('resumenPartida').textContent,
+                        horario: document.getElementById('resumenHorario').textContent,
+                        extras: document.getElementById('resumenExtras').textContent,
+                        tipoViaje: document.getElementById('resumenTipoViaje').textContent,
+                        fechaSalida: document.getElementById('resumenFechaSalida').textContent,
+                        fechaRegreso: document.getElementById('resumenFechaRegreso').textContent,
+                        numeroVuelo: document.getElementById('resumenNumeroVuelo').textContent
+                    },
+                    total: total
+                });
+                enviarTiquetePorEmail();
+            } else {
+                alert('Por favor, complete todos los campos de la tarjeta.');
+            }
+        }
+
+        // Inicializar el resumen
+        actualizarResumen();
+
+        // Agregar event listener para la fecha de regreso
+        document.getElementById('tipoViaje').addEventListener('change', function() {
+            const fechaRegreso = document.getElementById('fechaRegreso');
+            fechaRegreso.disabled = this.value === 'ida';
+            if (this.value === 'ida') {
+                fechaRegreso.value = '';
+            }
+            actualizarResumen();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            actualizarResumen();
+        });
+    </script>
+</body>
+</html>
